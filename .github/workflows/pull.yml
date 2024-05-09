@@ -12,13 +12,7 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run a script
-        run: node my-script.js
+        uses: actions/checkout@v4
 
       - name: Display Node.js version
         run: node -v
