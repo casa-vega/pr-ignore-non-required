@@ -1,0 +1,24 @@
+name: Container Workflow
+
+on: push
+
+jobs:
+  run-in-container:
+    runs-on: self-hosted
+
+    # Specify the container image
+    container:
+      image: node:20
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run a script
+        run: node my-script.js
+
+      - name: Display Node.js version
+        run: node -v
